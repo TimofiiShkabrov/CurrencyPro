@@ -10,6 +10,8 @@ import Foundation
 // Function for retrieving the current date using "dateFormatter".
 func getDate() -> String {
     let dateFormatter = DateFormatter()
+    // Time zone GMT+3
+    dateFormatter.timeZone = TimeZone(identifier: "Europe/Kiev")
     
     dateFormatter.dateFormat = "dd"
     let day = dateFormatter.string(from: Date())
